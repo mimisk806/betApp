@@ -3,7 +3,7 @@
 function resultsController($scope, $http) {
 
     $scope.bets = [];
-    $http.get('http://localhost/WsBetApp.svc/bets/1').
+    $http.get('http://le-gall.info/betApp/WsBetApp.svc/bets/1').
          success(function (data) {
              $scope.bets = data;
 
@@ -14,7 +14,7 @@ function resultsController($scope, $http) {
 function betsController($scope, $http) {
 
     $scope.bet = {};
-    $http.get('http://localhost/WsBetApp.svc/bets/1').
+    $http.get('http://le-gall.info/betApp/WsBetApp.svc/bets/1').
          success(function (data) {
              $scope.bets = data;
             
@@ -26,7 +26,7 @@ function betController($scope, $http) {
 
     $scope.bet = {};
     var idBet = getUrlVars()["id"];
-    $http.get('http://localhost/WsBetApp.svc/bet/' + idBet).
+    $http.get('http://le-gall.info/betApp/WsBetApp.svc/bet/' + idBet).
          success(function (data) {
              $scope.bet = data;
              var date = new Date($scope.bet.DateAndTime);
@@ -45,7 +45,7 @@ function adminController($scope, $http) {
 
     $scope.connectMe = function () {
 
-        $http.get('http://localhost/WsBetApp.svc/user/' + $scope.user.id + '/' + $scope.user.password).
+        $http.get('http://le-gall.info/betApp/WsBetApp.svc/user/' + $scope.user.id + '/' + $scope.user.password).
 			success(function (data) {
 			    $scope.user = data;
 			}).
@@ -55,7 +55,7 @@ function adminController($scope, $http) {
         console.log($scope.user);
 
         if ($scope.user.id !== null) {
-            $http.get('http://localhost/WsBetApp.svc/bets/' + $scope.user.id ).
+            $http.get('http://le-gall.info/betApp/WsBetApp.svc/bets/' + $scope.user.id ).
                 success(function (data) {
                     $scope.bets = data;
                 });
@@ -179,7 +179,7 @@ function adminController($scope, $http) {
 
 
             $http({
-                url: "http://localhost/WsBetApp.svc/bets",
+                url: "http://le-gall.info/betApp/WsBetApp.svc/bets",
                 method: "POST",
                 data: JSON.stringify(JSONObject)
             }).success(function (data, status, headers, config) {
@@ -196,7 +196,7 @@ function adminController($scope, $http) {
 
             //$.ajax({
             //    type: 'POST',
-            //    url: "http://localhost/WsBetApp.svc/bets",
+            //    url: "http://le-gall.info/betApp/WsBetApp.svc/bets",
             //    data: JSON.stringify(JSONObject),
             //    contentType: "application/json",
             //    dataType: "json", //Expected data format from server
@@ -233,7 +233,7 @@ function adminController($scope, $http) {
             };
 
             $http({
-                url: "http://localhost/WsBetApp.svc/bets/update",
+                url: "http://le-gall.info/betApp/WsBetApp.svc/bets/update",
                 method: "POST",
                 data: JSON.stringify(JSONObject)
             }).success(function (data, status, headers, config) {
@@ -271,7 +271,7 @@ function adminController($scope, $http) {
 
 
         $http({
-            url: "http://localhost/WsBetApp.svc/bets",
+            url: "http://le-gall.info/betApp/WsBetApp.svc/bets",
             method: "DELETE",
             data: JSON.stringify(JSONObject)
         }).success(function (data, status, headers, config) {
@@ -304,7 +304,7 @@ function adminController($scope, $http) {
 
     //$http({
     //    method: "POST",
-    //    url: "http://localhost/WsBetApp.svc/bets/0",
+    //    url: "http://le-gall.info/betApp/WsBetApp.svc/bets/0",
     //    data: JSON.stringify($scope.bet),
     //    headers: {
     //        Accept: "application/json",
@@ -323,7 +323,7 @@ function adminController($scope, $http) {
 
     //$.ajax({
     //    type: "POST",
-    //    url: "http://localhost/WsBetApp.svc/bets/0",
+    //    url: "http://le-gall.info/betApp/WsBetApp.svc/bets/0",
     //    data: $scope.bet,
     //    contentType: "application/json; charset=utf-8",
     //    dataType: "json",
@@ -340,7 +340,7 @@ function adminController($scope, $http) {
 
     //    $http({
     //        method: "POST",
-    //        url: "http://localhost/WsBetApp.svc/bets/",
+    //        url: "http://le-gall.info/betApp/WsBetApp.svc/bets/",
     //        data: JSON.stringify($scope.bet),
     //        headers: {
     //            Accept: "application/json",
