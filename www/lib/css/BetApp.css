@@ -16,7 +16,8 @@
     bottom: 0;
     width: 100%;
     height: 65px;
-    background: white url('../images/footer-background.png') repeat-x 0 0;
+    /*background: white url('../images/footer-background.png') repeat-x 0 0;*/
+    background:#D0D6FF;
 }
 
     #footer ul {
@@ -99,6 +100,15 @@
     max-width: 100%;
     opacity: 0.5;
     margin-bottom: 20px;
+}
+
+
+/*
+    Results 
+*/
+#text-results {
+    text-align: center;
+    padding-top:10px;
 }
 
 
@@ -214,6 +224,11 @@ input[type="password"] {
 
 #date {
     width: 200px;
+    
+}
+#datetimepicker1 {
+    margin-left: -15px;
+    ;
 }
 
 /*
@@ -235,11 +250,13 @@ input[type="password"] {
     .item > .image-gauche {
         width: 50%;
         float: left;
+        height:100px;
     }
 
         .item > .image-gauche > img {
-            height: 50%;
+            height: 100%;
             float: left;
+            width:100%;
         }
 
     .item > .data-droite {
@@ -254,11 +271,13 @@ input[type="password"] {
     .item > .image-droite {
         width: 50%;
         float: right;
+        height:100px;
     }
 
         .item > .image-droite > img {
-            height: 50%;
+            height: 100%;
             float: right;
+            width:100%;
         }
 
     .item > .data-gauche {
@@ -387,7 +406,7 @@ input[type="password"] {
     background-image: -webkit-linear-gradient(top, #626262, #404040);
     background-image: -moz-linear-gradient(top, #626262, #404040);
     background-image: -o-linear-gradient(top, #626262, #404040);
-    background-image: linear-gradient(to bottom, #A1D2FF, #103491);
+    background-image: linear-gradient(to bottom, #92C5F5, #7293F0);
     -webkit-box-shadow: inset 0 -6px rgba(0, 0, 0, 0.08), inset 0 -1px rgba(0, 0, 0, 0.3);
     box-shadow: inset 0 -6px rgba(0, 0, 0, 0.08), inset 0 -1px rgba(0, 0, 0, 0.3);
 }
@@ -498,4 +517,41 @@ table {
     body {
         font-size: 1.5em !important;
     }
+}
+
+
+
+/*
+    Polices et autre
+*/
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Quicksand Light'), local('Quicksand-Light'), url(../fonts/font01.woff) format('woff');
+}
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Quicksand Regular'), local('Quicksand-Regular'), url(../fonts/font02.woff) format('woff');
+}
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Quicksand Bold'), local('Quicksand-Bold'), url(../fonts/font03.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(../fonts/font03.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(../fonts/font03.woff) format('woff');
 }

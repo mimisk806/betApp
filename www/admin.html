@@ -24,8 +24,8 @@
     <div class="container" ng-if="!user.Mail">
         <form class="form-signin">
             <h1 class="form-signin-heading">Please Login</h1>
-            <input type="text" class="form-control" name="username" ng-model="user.id" placeholder="Email Address" required="" autofocus="" />
-            <input type="password" class="form-control" name="password" ng-model="user.password" placeholder="Password" required="" />
+            <input type="text" class="form-control" name="username" ng-model="connect.id" placeholder="Email Address" required="" autofocus="" />
+            <input type="password" class="form-control" name="password" ng-model="connect.password" placeholder="Password" required="" />
             <button id="buttonConnect" ng-click="connectMe()" name="buttonConnectMe" class="btn btn-lg btn-primary btn-block">Log in</button>
 
         </form>
@@ -69,7 +69,7 @@
         </div>
     </div>
     <br />
-    <button id="buttonnewBet" style="display: none" ng-click="displayForm()" name="buttonNewBet" class="btn btn-success">Nouveau pronostic !</button>
+    <button id="buttonnewBet" ng-if="user.Mail" ng-click="displayForm()" name="buttonNewBet" class="btn btn-success">Nouveau pronostic !</button>
     <fieldset id="newBetForm" style="display: none;" ng-if="user.Mail">
         <!-- Form Name -->
         <legend>Pronostic</legend>
@@ -88,15 +88,17 @@
 
             <!-- Text input-->
             <div class="form-group">
-                <label class="col-xs-12 col-lg-12 control-label" for="betTitle">Date et heure</label>
-                <div class="col-xs-3 col-lg-3">
-                    <div class='input-group date' id='datetimepicker1'>
-                         <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
-                        </span>
-                        <input id="date" type='text' autofill="autofill" ng-model="bet.DateAndTime" class="form-control" />
-                       
-                    </div>
+                <label class="col-xs-12 col-lg-6 control-label" for="betTitle">Date et heure</label>
+                <div class="col-xs-12 col-lg-6">
+                    
+                    <div class="col-xs-3 col-lg-3">
+                        <div class='input-group date' id='datetimepicker1'>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                            <input id="date" type='text' autofill="autofill" ng-model="bet.DateAndTime" class="form-control" />
 
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -114,11 +116,13 @@
                 <div class="col-xs-12 col-lg-6">
                     <div class="controls">
                         <select id="betSport" ng-model="bet.Sport" class="form-control">
+                            <option>Combi</option>
                             <option>Football</option>
                             <option>Rugby</option>
                             <option>Handball</option>
-                            <option>Combi</option>
+                            <option>Baseball</option>
                             <option>Basket</option>
+                            <option>foot US</option>
                             <option>Tennis</option>
                             <option>Hockey</option>
                         </select>
@@ -200,13 +204,13 @@
             </div>
 
             <!-- Button (Double) -->
-            <pre>form = {{bet | json}}</pre>
+            <!--<pre>form = {{bet | json}}</pre>-->
 
 
 
         </form>
     </fieldset>
-    <div id="btnForm" style="display:none" class="form-group">
+    <div id="btnForm" style="display: none" class="form-group">
         <label class="col-xs-12 col-lg-6 control-label" for="button1id">Double Button</label>
         <div class="col-md-8">
             <button id="buttonCreateUpdate" ng-click="createOrUpdate()" name="buttonCreateUpdate" class="btn btn-success">Créer</button>

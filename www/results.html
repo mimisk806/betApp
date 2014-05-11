@@ -8,8 +8,8 @@
     <link href="lib/css/bootstrap.min.css" rel="stylesheet" />
     <script src="lib/js/angular.min.js"></script>
 
-    <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css' />
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css' />
+    <!--<link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css' />-->
     <link href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet" type='text/css' />
 
 
@@ -20,22 +20,22 @@
     <div id="content" ng-app class="container">
 
         <div class="row">
-            Voici mes résultats sur les 10 derniers pronostic proposés.
-            <div class="col-xs-12 col-sm-12">
+            <div id="text-results">Voici mes résultats sur les 10 derniers pronostic proposés.</div>
+            <div class="col-xs-12 col-sm-12" style="padding-left: 0px !important; padding-right: 0px !important; ">
                 <table ng-controller="resultsController" class="bordered">
                     <thead>
 
                         <tr>
-                            <th>Sport</th>
                             <th>Titre</th>
+                            <th>Côte</th>
                             <th>Details</th>
                             <th>Etat</th>
                         </tr>
                     </thead>
 
                     <tr ng-repeat="bet in bets">
-                        <td>{{bet.Sport}}</td>
                         <td>{{bet.Title}}</td>
+                        <td>{{bet.Odd}}</td>
                         <td><a href="bet.html?id={{bet.Id}}">Details</a></td>
                         <td>
                             <img ng-src="lib/images/{{bet.Etat}}.png" />

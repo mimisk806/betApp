@@ -17,7 +17,7 @@ function betsController($scope, $http) {
     $http.get('http://le-gall.info/betApp/WsBetApp.svc/bets/1').
          success(function (data) {
              $scope.bets = data;
-            
+
          });
 
 }
@@ -42,27 +42,36 @@ function adminController($scope, $http) {
     $scope.bets = [];
     $scope.bet = {};
     $scope.user = {};
-
+    $scope.connect = {};
     $scope.connectMe = function () {
 
-        $http.get('http://le-gall.info/betApp/WsBetApp.svc/user/' + $scope.user.id + '/' + $scope.user.password).
+        $http.get('http://le-gall.info/betApp/WsBetApp.svc/user/' + $scope.connect.id + '/' + $scope.connect.password).
 			success(function (data) {
+			    
 			    $scope.user = data;
+			    
+			    if ($scope.user.Id == 0 ) {
+			        alert('Mauvaise combinaison Id/Mot de passe');
+			    }
+			    else { $scope.getMyBets(); }
+
 			}).
 			error(function (data) {
 			    alert('pas bon!');
 			});
-        console.log($scope.user);
 
-        if ($scope.user.id !== null) {
-            $http.get('http://le-gall.info/betApp/WsBetApp.svc/bets/' + $scope.user.id ).
-                success(function (data) {
-                    $scope.bets = data;
-                });
-            $('#buttonnewBet').show();
-
-        }
     }
+
+
+
+    $scope.getMyBets = function () {
+        $http.get('http://le-gall.info/betApp/WsBetApp.svc/bets/' + $scope.user.Id).
+               success(function (data) {
+                   $scope.bets = data;
+
+               });
+    }
+
     $scope.displayForm = function () {
         $('#newBetForm').show();
         $('#buttonnewBet').hide();
@@ -149,18 +158,18 @@ function adminController($scope, $http) {
 
     $scope.cancelBet = function () {
 
-      
+
         $("#buttonCreateUpdate").html('Cr&eacute;er');
         $("#buttonCancel").hide();
         $scope.bet = {};
         return false;
 
-    } 
+    }
 
     $scope.createOrUpdate = function () {
 
         //if(test tt les champs)
-        
+
         if ($scope.bet.Id == null) {
             $scope.controleBet();
             $scope.bet.DateAndTime = $("#date").val();
@@ -357,7 +366,7 @@ function adminController($scope, $http) {
     //    console.log(JSON.stringify(status + " " + error));
     //});
 
-   
+
 
 
 };
