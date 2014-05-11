@@ -20,7 +20,7 @@
     <div id="content" ng-app class="container">
 
         <div class="row">
-            <div id="text-results">Voici mes résultats sur les 10 derniers pronostic proposés.</div>
+            <div id="text-results">Voici mes résultats sur les 10 derniers pronostic proposés :</div>
             <div class="col-xs-12 col-sm-12" style="padding-left: 0px !important; padding-right: 0px !important; ">
                 <table ng-controller="resultsController" class="bordered">
                     <thead>
@@ -38,7 +38,7 @@
                         <td>{{bet.Odd}}</td>
                         <td><a href="bet.html?id={{bet.Id}}">Details</a></td>
                         <td>
-                            <img ng-src="lib/images/{{bet.Etat}}.png" />
+                            <img src="lib/images/{{bet.Etat}}.png" />
                         </td>
 
                     </tr>
