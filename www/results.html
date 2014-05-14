@@ -17,7 +17,7 @@
                     <tr ng-repeat="bet in bets">
                         <td>{{bet.Title}}</td>
                         <td>{{bet.Odd}}</td>
-                        <td><a href="bet.html?id={{bet.Id}}">Details</a></td>
+                        <td><a href="#bet/{{bet.Id}}">Details</a></td>
                         <td>
                             <img ng-src="lib/images/{{bet.Etat}}.png" />
                         </td>
