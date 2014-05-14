@@ -1,6 +1,45 @@
 
 
-function resultsController($scope, $http) {
+
+
+
+//Define an angular module for our app
+var betApp = angular.module('betApp', ['ngRoute']);
+
+//Define Routing for app
+//Uri /AddNewOrder -> template add_order.html and Controller AddOrderController
+//Uri /ShowOrders -> template show_orders.html and Controller AddOrderController
+betApp.config(function($routeProvider) {
+      $routeProvider.
+        when('/bets', {
+            templateUrl: 'bets.html',
+            controller: 'betsController'
+        }).
+        when('/bet/:betId', {
+            templateUrl: 'bet.html',
+            controller: 'betController'
+        }).
+        when('/results', {
+            templateUrl: 'results.html',
+            controller: 'resultsController'
+        }).
+           when('/home', {
+               templateUrl: 'home.html',
+               
+           }).
+        when('/contact', {
+            templateUrl: 'contact.html',
+            
+        }).
+        otherwise({
+            redirectTo: '/home'
+        });
+  });
+
+
+
+betApp.controller('resultsController', function ($scope, $http) {
+
 
     $scope.bets = [];
     $http.get('http://le-gall.info/betApp/WsBetApp.svc/bets/1').
@@ -9,9 +48,12 @@ function resultsController($scope, $http) {
 
          });
 
-}
+});
 
-function betsController($scope, $http) {
+
+betApp.controller('betsController', function ($scope, $http) {
+
+
 
     $scope.bet = {};
     $http.get('http://le-gall.info/betApp/WsBetApp.svc/bets/1').
@@ -19,13 +61,14 @@ function betsController($scope, $http) {
              $scope.bets = data;
 
          });
+});
 
-}
+betApp.controller('betController', function ($scope, $http, $routeParams) {
 
-function betController($scope, $http) {
-
+   
     $scope.bet = {};
-    var idBet = getUrlVars()["id"];
+    var idBet = $routeParams.betId;
+    
     $http.get('http://le-gall.info/betApp/WsBetApp.svc/bet/' + idBet).
          success(function (data) {
              $scope.bet = data;
@@ -34,7 +77,8 @@ function betController($scope, $http) {
              $scope.bet.DateAndTime = madate;
          });
 
-}
+});
+
 
 function adminController($scope, $http) {
 
@@ -47,10 +91,10 @@ function adminController($scope, $http) {
 
         $http.get('http://le-gall.info/betApp/WsBetApp.svc/user/' + $scope.connect.id + '/' + $scope.connect.password).
 			success(function (data) {
-			    
+
 			    $scope.user = data;
-			    
-			    if ($scope.user.Id == 0 ) {
+
+			    if ($scope.user.Id == 0) {
 			        alert('Mauvaise combinaison Id/Mot de passe');
 			    }
 			    else { $scope.getMyBets(); }
@@ -371,8 +415,6 @@ function adminController($scope, $http) {
 
 };
 
-
-
 function ajax($scope, $http) {
 
     $.ajax({
@@ -401,8 +443,6 @@ function ajax($scope, $http) {
     });
 
 }
-
-
 
 function getUrlVars() {
 
