@@ -5,59 +5,205 @@
     font-family: 'Lato' !important;
     text-transform: uppercase !important;
     line-height: normal !important;
+
+    background-color:#bababa;
+    /*background-image:url("../images/orn.jpg");
+    color:#fff;*/
+    font:14px/1.3 Arial,sans-serif;
 }
 
-/*
-    footer
-*/
-#footer {
-    z-index: 1000;
-    position: fixed;
-    bottom: 0;
+
+/* bet in bets */
+
+
+.follow span {
+ color:   #3285BB;
+}
+
+.headerofContent 
+{ 
+border-bottom:  1px solid #9C9C9C;
+}
+.newsDate{
+color:#816c52;
+}
+.newsGrey{
+width:100%;
+display: -webkit-box;
+height: auto;
+
+border-bottom: 1px solid #9C9C9C;
+
+background-color: #e4e4e4;
+box-shadow: -1px 1px 10px 1px rgba(0, 0, 0, 0.13) inset
+}
+.newsGrey2{
+width:100%;
+display: -webkit-box;
+height: auto;
+
+border-bottom: 1px solid #9C9C9C;
+
+background-color: white;
+box-shadow: -1px 1px 10px 1px rgba(0, 0, 0, 0.13) inset
+}
+
+
+.newsImg{
+width: 40%;
+padding: 5px;
+}
+.newsImg img{
+width: auto;
+max-width: 100%;
+}
+.newsInfos{
+width: 60%;
+text-align:center;
+padding: 5px 5px 5px 0px;
+}
+.newsTitle{
+
+}
+.newsFlux{
+color: #b14040;
+
+}
+
+/* Header */
+
+.headerofContent
+{
+    padding: 61px 0 10px 0;
+    text-align: center;
+    font-size: 1.4em;
+}
+
+headerNewsTitle
+{
+    color:black;
+}
+
+
+/* Nav bar 2 */
+
+.containerr {
+    background:url("../images/header.jpg") repeat-x top left;
+    border-top: 5px solid #000000;
+   
+    overflow: hidden;
+    position: relative;
     width: 100%;
-    height: 65px;
-    /*background: white url('../images/footer-background.png') repeat-x 0 0;*/
-    background:#dce9f9;
 }
 
-    #footer ul {
-        width: 278px;
-        height: 100%;
-        margin: 5px auto;
-        padding: 0;
-        list-style: none;
-        background: url('../images/menu.png') 0 0 no-repeat;
-        text-align: center;
-        overflow: hidden;
-    }
+ul#nav {
+    width:100%;
+    color: #232223;
+    padding-left:10px;
+    display:block;
+    float:right;
+    font: 16px/26px Georgia,"Times New Roman",Times,serif;
+}
+ul#nav,ul#nav ul {
+    list-style:none;
+}
 
-    #footer li {
-        display: inline-block;
-        float: left;
-        margin: 0px;
-    }
+ul#nav ul {
+    padding:0 5px 5px;
+}
+ul#nav li {
+    display:inline;
+    float:left;
+}
+ul#nav a {
+    color: #353435;
+    float: left;
+    font-size: 11px;
+    letter-spacing: 1px;
+    line-height: 5px;
+    padding: 36px 8px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #B4C6C6;
+    text-transform: uppercase;
+}
 
-        #footer li > a {
-            display: block;
-            width: 50px;
-            height: 50px;
-            font-size: 0;
-            opacity: 0.4;
-        }
+ul#nav li a.current, ul#nav li a.current:hover {
+    background: url("../images/nav_current3.png") no-repeat scroll center top transparent;
+    border: medium none;
+    color: #fff;
+    padding-top: 36px;
+    text-shadow: none;
+}
+ul#nav ul a {
+    color:#000;
+    font-size:12px;
+    font-weight:bold;
+    padding:5px;
+    text-shadow:#fff 0 0 0;
+
+    border-radius:0;
+    -moz-border-radius:0;
+    -webkit-border-radius:0;
+}
+ul#nav ul li:hover>a {
+    letter-spacing:2px;
+}
 
 /*
-    décalage lien menu
+Nav bar
 */
-.menu-left {
-    margin-left: 26px;
+
+#custom-nav
+{
+    /*Ombre portée*/
+    -webkit-box-shadow: 0px 5px 14px 0px rgba(50, 50, 50, 0.25);
+    -moz-box-shadow: 0px 5px 14px 0px rgba(50, 50, 50, 0.25);
+    box-shadow: 0px 5px 14px 0px rgba(50, 50, 50, 0.25);
+    /*Fond dégradé*/
+    background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0, #3C75BA), color-stop(1, #4887CF) );
+    background-image: -o-linear-gradient(bottom, #3C75BA 0%, #4887CF 100%);
+    background-image: -moz-linear-gradient(bottom, #3C75BA 0%, #4887CF 100%);
+    background-image: -webkit-linear-gradient(bottom, #3C75BA 0%, #4887CF 100%);
+    background-image: -ms-linear-gradient(bottom, #3C75BA 0%, #4887CF 100%);
+    background-image: linear-gradient(to bottom, #3C75BA 0%, #4887CF 100%);
 }
 
-/*
-    remonter a cause du menu footer
-*/
-#content {
-    padding-bottom: 70px;
+.navbar-toggle
+{
+    margin-top: 3px;
+    margin-right: 0px;
 }
+
+.logo
+{
+    background-color: transparent;
+    margin-top: 8px;
+    width: 8%;
+}
+
+.logoText
+{
+    background-color: transparent;
+    padding-bottom: 1px;
+    margin-left: 15%;
+    margin-top: 8px;
+    width: 28%;
+    height: 28%;
+}
+
+.btnRefresh
+{
+    background-color: transparent;
+    float: right;
+    color: white;
+    font-size: 22px;
+    border: none;
+    margin-top: 8px;
+}
+
+
+
 
 /*
    contact    
@@ -300,7 +446,7 @@ input[type="password"] {
 */
 .follow {
     margin: 0 auto 0 auto;
-    background-color: #2589cc;
+    background-color: #B3C4CF;
     width: 100px;
     color: white;
     text-align: center;
@@ -329,6 +475,10 @@ input[type="password"] {
 /*
     block details bet
 */
+
+#bet {
+    margin: 5px;
+}
 .share-btn {
     display: inline-block;
     vertical-align: top;
@@ -519,6 +669,17 @@ table {
     }
 }
 
+/* other */
+ .col-xs-12 {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+
+ .container{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
 
 
 /*
