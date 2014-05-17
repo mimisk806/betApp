@@ -2,7 +2,8 @@
     $("ul a").removeClass("current");
     $("ul li:nth-child(3) a").addClass("current");
 </script>
-
+<div id="content" class="container" style="padding-left:15px; padding-right:15px;">
+ 
 <div class="headerofContent">
 		<div class="headerNewsTitle">RESULTATS</div>
 		
@@ -10,7 +11,7 @@
 
         <div class="row">
             <div id="text-results">Voici mes résultats sur les 10 derniers pronostic proposés :</div>
-            <div class="col-xs-12 col-sm-12" style="padding-left: 0px !important; padding-right: 0px !important; ">
+            <div class="col-xs-12 col-sm-12">
                 <table ng-controller="resultsController" class="bordered">
                     <thead>
 
@@ -41,4 +42,4 @@
 
 
         </div>
-  
+  </div>

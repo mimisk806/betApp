@@ -31,7 +31,8 @@ color:#816c52;
 width:100%;
 display: -webkit-box;
 height: auto;
-
+border-left: 1px solid #9C9C9C;
+border-right: 1px solid #9C9C9C;
 border-bottom: 1px solid #9C9C9C;
 
 background-color: #e4e4e4;
@@ -41,7 +42,8 @@ box-shadow: -1px 1px 10px 1px rgba(0, 0, 0, 0.13) inset
 width:100%;
 display: -webkit-box;
 height: auto;
-
+border-left: 1px solid #9C9C9C;
+border-right: 1px solid #9C9C9C;
 border-bottom: 1px solid #9C9C9C;
 
 background-color: white;
@@ -222,6 +224,8 @@ Nav bar
 
 .contact-me {
    
+    position:fixed;
+    margin-bottom:5px;
     font-size: 0.8em;
     left: 5%;
 }
@@ -675,10 +679,10 @@ table {
 }
 
 
- .container{
+ /*.container{
     padding-left: 0px !important;
     padding-right: 0px !important;
-}
+}*/
 
 
 /*
