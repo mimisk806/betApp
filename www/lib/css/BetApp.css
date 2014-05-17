@@ -99,11 +99,11 @@ headerNewsTitle
 }
 
 ul#nav {
-    width:100%;
+    width:320px;
     color: #232223;
     padding-left:10px;
     display:block;
-    float:right;
+    float:left;
     font: 16px/26px Georgia,"Times New Roman",Times,serif;
 }
 ul#nav,ul#nav ul {
@@ -120,7 +120,7 @@ ul#nav li {
 ul#nav a {
     color: #353435;
     float: left;
-    font-size: 11px;
+    font-size: 12px;
     letter-spacing: 1px;
     line-height: 5px;
     padding: 36px 8px;
