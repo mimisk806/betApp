@@ -74,7 +74,7 @@ color: #b14040;
 
 .headerofContent
 {
-    padding: 61px 0 10px 0;
+    padding: 8px 0 10px 0;
     text-align: center;
     font-size: 1.4em;
 }
@@ -221,8 +221,7 @@ Nav bar
 
 
 .contact-me {
-    position: fixed;
-    bottom: 75px;
+   
     font-size: 0.8em;
     left: 5%;
 }
