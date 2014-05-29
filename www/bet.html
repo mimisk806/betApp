@@ -1,77 +1,34 @@
-﻿<div id="content" class="container">
+﻿<script type="text/javascript">
+  
 
-<div class="headerofContent">
-    <div class="headerNewsTitle">DETAILS</div>
+</script>
+
+
+<!-- page wrapper starts -->
+<div class="pageWrapper sectionWrapper servicesPageWrapper" id="servicesSection">
+
+    <!-- section title starts -->
+    <h2 class="sectionTitle sectionTitleBlock">Détails du pronostic</h2>
+    <!-- section title ends -->
+
+    <!-- service wrapper starts -->
+    <div class="serviceWrapper">
+        <div class="serviceIcon serviceIconScreenLight"></div>
+        <div class="serviceContentWrapper">
+            <p>Titre : {{bet.Title}}</p>
+            <p>Sport : {{bet.Sport}}</p>
+            <p>Date : {{bet.DateAndTime}}</p>
+            <p>Côte : {{bet.Odd}}</p>
+            <p>Bookmaker : {{bet.Bookmaker}}</p>
+            <p>Montant joué :{{bet.Amount}}€</p>
+            <p>Etat :
+                <img ng-src="lib/images/{{bet.Etat}}.png" /></p>
+            <p>Analyse : {{bet.Details}}</p>
+            <a href="typography.html" class="buttonWrapper buttonDefault serviceMoreButton">Read More</a>
+        </div>
+    </div>
+    <!-- service wrapper ends -->
+
+
 
 </div>
-
-<div class="row">
-
-    <div id="bet">
-
-        <div class="col-xs-12 col-sm-12">
-
-            <div class="share-btn">
-                <span class="share-btn-action share-btn-value">{{bet.Title}}</span>
-                <span class="share-btn-title">Titre</span>
-            </div>
-        </div>
-
-
-        <div class="col-xs-6 col-sm-6">
-            <div class="share-btn">
-                <span class="share-btn-action share-btn-value">{{bet.Sport}}</span>
-                <span class="share-btn-title">Sport</span>
-            </div>
-        </div>
-
-        <div class="col-xs-6 col-sm-6">
-            <div class="share-btn">
-                <span class="share-btn-action share-btn-value">{{bet.DateAndTime}}</span>
-                <span class="share-btn-title">Date</span>
-            </div>
-        </div>
-
-        <div class="col-xs-6 col-sm-6">
-            <div class="share-btn">
-                <span class="share-btn-action share-btn-value">{{bet.Odd}}</span>
-                <span class="share-btn-title">Côte</span>
-            </div>
-
-        </div>
-
-        <div class="col-xs-6 col-sm-6">
-            <div class="share-btn">
-                <span class="share-btn-action share-btn-value">{{bet.Bookmaker}}</span>
-                <span class="share-btn-title">Book</span>
-            </div>
-        </div>
-        <div class="col-xs-6 col-sm-6">
-            <div class="share-btn">
-                <span class="share-btn-action share-btn-value">{{bet.Amount}}€</span>
-                <span class="share-btn-title">Montant</span>
-            </div>
-
-        </div>
-
-        <div class="col-xs-6 col-sm-6">
-            <div class="share-btn" ng-if="bet.Etat">
-                <div class="share-btn-action share-btn-value">
-                    <img ng-src="lib/images/{{bet.Etat}}.png" />
-                </div>
-
-                <span class="share-btn-title">Etat</span>
-            </div>
-
-        </div>
-
-        <div class="col-xs-12 col-sm-12">
-            <div class="share-btn">
-                <span class="share-btn-action share-btn-value">{{bet.Details}}</span>
-                <span class="share-btn-title">Details</span>
-            </div>
-        </div>
-
-    </div>
-</div>
-    </div>

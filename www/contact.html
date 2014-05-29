@@ -1,43 +1,71 @@
 ﻿<script type="text/javascript">
-    $("ul a").removeClass("current");
-    $("ul li:nth-child(4) a").addClass("current");
+   
 </script>
-<div id="content" class="container">
-<div class="headerofContent">
-		<div class="headerNewsTitle">CONTACT</div>
-		
-		</div>
-<div class="row">
 
 
 
-    <div class="col-xs-12 col-sm-12">
-
-        <div class="contact-consumer">
-            Des questions ? remarques, avis ?<br />
-            Venez discuter et partager vos pronostics et vos impressions !<br />
-            Retrouvez moi sur facebook & Twitter<br />
-            <br />
-            <a href="https://www.facebook.com/">
-                <img src="./lib/images/fb.png" alt="Cliquez ici pour Facebook" title="Facebook" /></a>
-            <a href="https://www.twitter.com/">
-                <img src="./lib/images/twitter.png" alt="Cliquez ici pour Twitter" title="Twitter" /></a>
-            <br />
-            <br />
-
-
-            Si vous souhaitez me contacter par mail<br />
-            <a href="mailto:jeremy.info.job@gmail.fr">
-                <img src="./lib/images/mail.png" alt="Cliquez ici" title="Mail" /></a>
-            <br />
-            <br />
+ <!-- page wrapper starts -->
+  <div class="pageWrapper sectionWrapper contactPageWrapper" id="contactSection"> 
+    
+    <!-- section title starts -->
+    <h2 class="sectionTitle">Contact</h2>
+    <!-- section title ends -->
+    
+    <div class="pageContentWrapper noPadding noBackground"> 
+      
+      <!-- map starts -->
+      <div style="text-align:center">
+          Suivez moi sur les différents réseaux sociaux !
+      </div>
+      <!-- map ends --> 
+      
+      <!-- social icons wrapper starts -->
+      <div class="socialIconsWrapper"> <a href="#" class="socialIcon socialIconFacebookLight"></a> <a href="#" class="socialIcon socialIconRssLight"></a> <a href="#" class="socialIcon socialIconDribbbleLight"></a> <a href="#" class="socialIcon socialIconVimeoLight"></a> <a href="#" class="socialIcon socialIconTwitterLight"></a> <a href="#" class="socialIcon socialIconSkypeLight"></a> </div>
+      <!-- social icons wrapper ends --> 
+      
+      <!-- contact form wrapper starts -->
+      <div class="contactFormWrapper"> 
+        <!-- form success message wrapper starts -->
+        <div class="formSuccessMessageWrapper" id="formSuccessMessageWrapper">
+          <h4>Message envoyé!</h4>
+          <p>Merci pour votre message, il sera lu avec attention.</p>
         </div>
-        <div class="contact-me">
-            <a href="mailto:jeremy.info.job@gmail.fr">Intéressé par une appli mobile ? contactez le developpeur.</a>
-        </div>
+        <!-- form success message wrapper ends --> 
+        <!-- contact form starts -->
+        <form action="php/contact.php" method="post" class="contactForm" id="contactForm">
+          <fieldset>
+            <div class="formFieldWrapper">
+              <label for="contactNameField">Nom:</label>
+              <input type="text" name="contactNameField" value="" class="contactField requiredField" id="contactNameField" data-placeholder=""/>
+            </div>
+            <div class="formFieldWrapper">
+              <label for="contactEmailField">Email:</label>
+              <input type="text" name="contactEmailField" value="" class="contactField requiredField requiredEmailField" id="contactEmailField" data-placeholder=""/>
+            </div>
+            <div class="formTextareaWrapper">
+              <label for="contactMessageTextarea">Message:</label>
+              <textarea name="contactMessageTextarea" class="contactTextarea requiredField" id="contactMessageTextarea" data-placeholder=""></textarea>
+            </div>
+            <div class="formSubmitButtonErrorsWrapper"> 
+              <!-- form errors start --> 
+              <span class="formValidationError" id="contactNameFieldError">Votre nom est requis.</span> <span class="formValidationError" id="contactEmailFieldError">Votre email est requis.</span> <span class="formValidationError" id="contactEmailFieldError2">Adresse mail invalide.</span> <span class="formValidationError" id="contactMessageTextareaError">Aucun message écrit.</span> 
+              <!-- form errors end -->
+              <input type="submit" class="buttonWrapper contactSubmitButton" id="contactSubmitButton" value="Submit" data-form-id="contactForm"/>
+            </div>
+            <input type="hidden" name="formIsReady" value="true"  id="formIsReady" />
+          </fieldset>
+        </form>
+        <!-- contact form ends --> 
+      </div>
+      <!-- contact form wrapper ends --> 
     </div>
+    
+  </div>
+  <!-- page wrapper ends --> 
 
 
 
-</div>
-    </div>
+
+
+
+

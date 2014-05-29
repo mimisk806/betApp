@@ -1,30 +1,47 @@
 ﻿<script type="text/javascript">
-    $("ul a").removeClass("current");
-    $("ul li:nth-child(2) a").addClass("current");
+    
+
 </script>
-<div id="content" class="container">
-<div class="headerofContent">
-    <div class="headerNewsTitle">PRONOSTICS</div>
 
-</div>
-<div data-ng-repeat="bet in bets">
-        <div class="col-xs-12 col-sm-6">
+<!-- page wrapper starts -->
+<div class="pageWrapper sectionWrapper teamPageWrapper" id="teamSection">
+    <!-- page content wrapper starts -->
+    <div class="pageContentWrapper noPadding noBackground">
 
-            <div ng-class-odd="'newsGrey2'" ng-class-even="'newsGrey'">
-                <div class="newsImg">
-                    <img ng-src="lib/images/{{bet.Sport}}.png" /></div>
-                <div class="newsInfos">
-                    <div class="newsTitle"> Côte : {{bet.Odd}}</div>
-                    <div class="newsFlux"> Sport : {{bet.Sport}}</div>
-                    <div class="newsDate"> Mise : {{bet.Amount}} € </div>
-                     <div class="follow">
-                         <span class="glyphicon glyphicon-log-in"></span>
-                        <a href="#bet/{{bet.Id}}">Détails</a>
-                    </div>
-                </div>
+        <!-- section title starts -->
+        <h2 class="sectionTitle sectionTitleBlock">Pronostics</h2>
+        <!-- section title ends -->
+        <!-- team members wrapper starts -->
+        <div class="teamMembersWrapper">
+            <!-- team member starts -->
+            <div class="teamMember" data-ng-repeat="bet in bets">
+                <a href="#bet/{{bet.Id}}" class="teamMemberImageLink">
+                    <img ng-src="lib/images/{{bet.Sport}}.png" class="teamMemberImage" alt="" />
+                </a>
+                <h3 class="teamMemberName">{{bet.Title}}</h3>
+                <p class="teamMemberInfo">Bookmaker : {{bet.Bookmaker}}
+                    <br />
+                Côte : {{bet.Odd}}</p>
+                <a href="#bet/{{bet.Id}}" class="buttonWrapper buttonDefault teamMemberButton">Par ici !</a>
             </div>
+            <!-- team member ends -->
+
+            <!-- team member ends -->
+        </div>
+        <!-- team members wrapper ends -->
+
     </div>
-
-
+    <!-- page content wrapper ends -->
 </div>
-    </div>
+<!-- page wrapper ends -->
+
+
+
+
+<script type="text/javascript">
+    $('.portfolioTwoFilterableWrapper .portfolioFilterableItemsWrapper').css('width', $('.portfolioTwoFilterableWrapper').width() + 36);
+
+    var portfolioTwoFilterableItemWidth = ($('.portfolioTwoFilterableWrapper').width() - 36) / 2;
+
+    $('.portfolioTwoFilterableWrapper .portfolioFilterableItemWrapper').css('width', portfolioTwoFilterableItemWidth);
+</script>

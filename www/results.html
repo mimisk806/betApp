@@ -1,45 +1,41 @@
 ﻿<script type="text/javascript">
-    $("ul a").removeClass("current");
-    $("ul li:nth-child(3) a").addClass("current");
+   
+
 </script>
-<div id="content" class="container" style="padding-left:15px; padding-right:15px;">
- 
-<div class="headerofContent">
-		<div class="headerNewsTitle">RESULTATS</div>
-		
-		</div>
 
-        <div class="row">
-            <div id="text-results">Voici mes résultats sur les 10 derniers pronostic proposés :</div>
-            <div class="col-xs-12 col-sm-12">
-                <table ng-controller="resultsController" class="bordered">
-                    <thead>
-
-                        <tr>
-                            <th>Titre</th>
-                            <th>Côte</th>
-                            <th>Details</th>
-                            <th>Etat</th>
-                        </tr>
-                    </thead>
-
-                    <tr ng-repeat="bet in bets">
-                        <td>{{bet.Title}}</td>
-                        <td>{{bet.Odd}}</td>
-                        <td><a href="#bet/{{bet.Id}}">Details</a></td>
-                        <td>
-                            <img ng-src="lib/images/{{bet.Etat}}.png" />
-                        </td>
-
-                    </tr>
-                </table>
+<!-- page wrapper starts -->
+<div class="pageWrapper sectionWrapper portfolioPageWrapper">
+      <!-- section title starts -->
+    <h2 class="sectionTitle sectionTitleBlock">Résultats</h2>
+    <!-- section title ends --> 
+    
+    <!-- page content wrapper starts -->
+    <div class="pageContentWrapper">
+        <!-- page title starts -->
+       
+        <!-- page title ends -->
 
 
 
 
-            </div>
+        <table ng-controller="resultsController" class="bordered">
+            <thead>
 
+                <tr>
+                    <th>Titre</th>
+                    <th>Côte</th>
+                    <th>Etat</th>
+                </tr>
+            </thead>
 
+            <tr ng-repeat="bet in bets">
+                <td><a href="#bet/{{bet.Id}}" style="color:#1cbbb4">{{bet.Title}}</a></td>
+                <td>{{bet.Odd}}</td>
+                <td>
+                    <img ng-src="lib/images/{{bet.Etat}}.png" />
+                </td>
 
-        </div>
-  </div>
+            </tr>
+        </table>
+    </div>
+</div>
