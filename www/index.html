@@ -22,6 +22,8 @@
     <link href="lib/css/hidpi.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="lib/css/skin.css" rel="stylesheet" type="text/css" media="all" />
     <link href="lib/css/custom.css" rel="stylesheet" type="text/css" media="all" />
+	<link rel="stylesheet" type="text/css" href="lib/css/jPushMenu.css" />
+	<link rel="stylesheet" type="text/css" href="lib/css/menu.css" />
     <!-- CSS files end -->
 
     <!-- JavaScript files start -->
@@ -30,8 +32,13 @@
     <script type="text/javascript" src="lib/js/jquery.nivo-slider.min.js"></script>
     <script type="text/javascript" src="lib/js/jquery.colorbox.min.js"></script>
     <script type="text/javascript" src="lib/js/custom.js"></script>
+	<script src="lib/js/jPushMenu.js"></script>
     <!-- JavaScript files end -->
-
+ <script>
+     jQuery(document).ready(function ($) {
+         $('.toggle-menu').jPushMenu();
+     });
+      </script>
 
 
 </head>
@@ -39,16 +46,27 @@
 
     <!-- website wrapper starts -->
     <div class="websiteWrapper">
+	
+	<div class="collapse navbar-collapse myMenu cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left ">
+      
+           <ul class="btnRubrique">
+              <li class="glyphicon glyphicon-home"></li>
+			  <img class="split" src="lib/images/separateur.png">
+              <li class="rubriqueMenu"><a href="#home">Accueil</a></li>
+              <img class="split" src="lib/images/separateur.png">
+			  <li class="rubriqueMenu"><a href="#bets">Pronostics</a></li>
+              <img class="split" src="lib/images/separateur.png">
+			  <li class="rubriqueMenu"><a href="#results">Résultats</a></li>
+              <img class="split" src="lib/images/separateur.png">
+			  <li class="rubriqueMenu"><a href="#contact">Contact</a></li>
+              <img class="split" src="lib/images/separateur.png">
+           </ul>
+		   </div>
 
         <!-- main menu outer wrapper starts -->
         <div class="mainMenuOuterWrapper">
             <!-- main menu wrapper starts -->
-            <ul class="mainMenuWrapper">
-                <li class="mainMenuItemLink currentPage"><a onclick=" $('a.mainMenuButton').click();" href="#home" data-type="link">Home</a></li>
-                <li class="mainMenuItemLink"><a onclick=" $('a.mainMenuButton').click();" href="#bets" data-type="link">Pronostics</a></li>
-                <li class="mainMenuItemLink"><a onclick=" $('a.mainMenuButton').click();" href="#results" data-type="link">Résultats</a></li>
-                <li class="mainMenuItemLink"><a onclick=" $('a.mainMenuButton').click();" href="#contact" data-type="link">Contact</a></li>
-            </ul>
+           
             <!-- main menu wrapper ends -->
         </div>
         <!-- main menu outer wrapper ends -->
@@ -56,12 +74,56 @@
         <!-- header outer wrapper starts -->
         <div class="headerOuterWrapper">
             <div class="headerWrapper"><a href="#home" class="mainLogo">
-                <img src="lib/images/common/mainLogo.png" alt="" /></a> <a href="" class="mainMenuButton"></a></div>
+                <img src="lib/images/common/mainLogo.png" alt="" /></a> 
+				 <button id="btnMenu" type="button" class="toggle-menu menu-left navbar-toggle">
+           <img src="lib/images/menu.png" alt="" /></a>  
+          </button>
+				</div>
         </div>
         <!-- header outer wrapper ends -->
+<div class="ngview">
 
         <div ng-view></div>
+		
+		
+		
+		
+    
+  </div>
+  <!-- page wrapper ends --> 
 
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+</div>
 
     </div>
 
