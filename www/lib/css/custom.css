@@ -9,6 +9,37 @@
     display: inline;
 }
 
+.btnRubrique li img {
+    float: left;
+    margin-top: 5px;
+    width: 20%;
+}
+
+#pronos .teamMemberImageLink {
+    margin-bottom: 10px;
+}
+
+#pronos p {
+    margin-bottom: 5px;
+}
+
+@font-face {
+    font-family: logo;
+    src: url(../fonts/player.ttf);
+}
+
+#titrelogo a {
+    font-family: logo;
+    float: left;
+    font-size: 2em;
+    line-height: 2em;
+    
+    
+}
+#titrelogo a:hover
+{ 
+color:white;
+}
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*//////////////////// Custom CSS Rules End                                                                               */

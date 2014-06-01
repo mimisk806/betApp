@@ -4,7 +4,7 @@
 </script>
 
 <!-- page wrapper starts -->
-<div class="pageWrapper sectionWrapper teamPageWrapper" id="teamSection">
+<div id="pronos" class="pageWrapper sectionWrapper teamPageWrapper" id="teamSection">
     <!-- page content wrapper starts -->
     <div class="pageContentWrapper noPadding noBackground">
 
@@ -16,7 +16,7 @@
             <!-- team member starts -->
             <div class="teamMember" data-ng-repeat="bet in bets">
                 <a href="#bet/{{bet.Id}}" class="teamMemberImageLink">
-                    <img ng-src="lib/images/{{bet.Sport}}.png" class="teamMemberImage" alt="" />
+                    <img ng-src="lib/images/sports/{{bet.Sport}}.png" class="teamMemberImage" alt="" />
                 </a>
                 <h3 class="teamMemberName">{{bet.Title}}</h3>
                 <p class="teamMemberInfo">Bookmaker : {{bet.Bookmaker}}
